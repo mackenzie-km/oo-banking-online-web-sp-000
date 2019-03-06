@@ -6,4 +6,8 @@ def initialize(name)
   @balance = 0
   @status = open 
 end 
+
+def deposit(amount)
+  @balance += amount 
+end 
 end
