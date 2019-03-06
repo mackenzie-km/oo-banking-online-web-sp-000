@@ -13,15 +13,13 @@ def valid?
 end 
 
 def execute_transaction 
-  value = "" 
   if valid? == true 
     @sender.balance -= @amount 
     @receiver.balance += @amount 
     @status = "complete"
   else 
-    value = "Transaction rejected. Please check your account balance."
+    "Transaction rejected. Please check your account balance."
   end
-  value 
 end 
 
 end
