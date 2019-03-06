@@ -3,6 +3,6 @@ class BankAccount
 attr_reader :name
 def initialize(name)
   @name = 
-  balance = 0
+  @balance = 0
 end 
 end
