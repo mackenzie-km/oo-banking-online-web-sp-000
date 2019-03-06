@@ -11,7 +11,7 @@ end
 def valid?
   @sender -= amount
   (@sender.valid? && @receiver.valid?)? true : false 
-  reverse_transfer
+  @sender += amount 
 end 
 
 def reverse_transfer
