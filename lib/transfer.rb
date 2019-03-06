@@ -1,4 +1,6 @@
 class Transfer
-def initialize(from, to, amount)
+  attr_reader :sender
+def initialize(sender, recipient, amount)
+  @sender = sender 
 end 
 end
