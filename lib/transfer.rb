@@ -9,7 +9,18 @@ def initialize(sender, receiver, amount)
 end 
 
 def valid?
+  @sender -= amount
   (@sender.valid? && @receiver.valid?)? true : false 
+  reverse_transfer
+end 
+
+def reverse_transfer
+  if @status == "complete" && valid?
+    @sender.balance += @amount 
+    @receiver.balance -= @amount 
+    @status = "complete"
+  else   
+    end 
 end 
 
 def execute_transaction 
