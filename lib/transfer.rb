@@ -10,9 +10,9 @@ end
 
 def valid?
   value = ""
-  @sender -= amount
+  @sender.balance -= amount
   (@sender.valid? && @receiver.valid?)? value = true : value = false 
-  @sender += amount
+  @sender.balance += amount
   value
 end 
 
