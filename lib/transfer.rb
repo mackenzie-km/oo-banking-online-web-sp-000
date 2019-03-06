@@ -17,8 +17,7 @@ end
 def reverse_transfer
   if @status == "complete" && valid?
     @sender.balance += @amount 
-    @receiver.balance -= @amount 
-    @status = "complete"
+    @receiver.balance -= @amount
   else   
     end 
 end 
